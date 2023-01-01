@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: #ff5168;
+    background-image: radial-gradient(#eec0c6, #090032);
+    font-family: 'Parisienne';
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-size: 40px;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(#eec0c6, #001258);
+    justify-content: center;
+    align-items: center;
+    animation: loadingFadeOutAnim 5.7s linear forwards;
+    z-index: 20;
+}
+
+@keyframes loadingFadeOutAnim {
+    0%, 90% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.loading .loading-bar {
+    position: relative;
+    border-radius: 10px;
+    height: 40px;
+    width: 400px;
+    background: transparent;
+    border: 2px solid #000000;
+    margin: 0 20px;
+}
+
+.loading .loading-bar::after {
+    content: "Loading...";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 36px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    mix-blend-mode: difference;
+}
+
+.loading .loading-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000000;
+    transform-origin: left;
+    animation: unfoldAnim 5s linear forwards;
+}
+
+
+
+
+
+
+@keyframes textFadeInAnim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
